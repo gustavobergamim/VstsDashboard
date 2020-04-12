@@ -1,4 +1,4 @@
-name: CI
+name: CI-CICDDashboard-Extension
 
 on:
   push:
@@ -25,5 +25,9 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
+
     - name: Compile extension
-      run: npm run compile
+      run: npm compile
+
+    - name: Package AzureDevOpsExtension
+      run: tfx extension create --json --no-color --manifest-globs vss-extension.json src/ext/**/*.json
