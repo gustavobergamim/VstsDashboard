@@ -27,7 +27,7 @@ jobs:
       run: npm install
 
     - name: Compile extension
-      run: npm compile
+      run: npm run compile
 
     - name: Package AzureDevOpsExtension
       run: tfx extension create --json --no-color --manifest-globs vss-extension.json src/ext/**/*.json
