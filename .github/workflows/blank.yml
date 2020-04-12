@@ -22,4 +22,4 @@ jobs:
     - name: Install Dependencies
       run: npm install
     - name: Compile extension
-      run: run compile
+      run: npm run compile
